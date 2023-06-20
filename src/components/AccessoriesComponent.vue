@@ -320,7 +320,7 @@ export default {
     },
     fn(img) {
       console.log(img);
-      return require(img);
+      return require("../assets/" + img);
     },
   },
   mounted() {

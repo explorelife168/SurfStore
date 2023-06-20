@@ -54,7 +54,7 @@
       "id": 1,
       "Name": "Donald Takayama bird sticker",
       "Price": 3.0,
-      "Img": "@/assets/Donald Takayama bird sticker.png",
+      "Img": "Donald Takayama bird sticker.png",
       "Size": {
         "Color": [
           "White",
