@@ -71,13 +71,13 @@
       "id": 2,
       "Name": "Donald Takayama bird sticker(16pc.)",
       "Price": 35.0,
-      "Img": "../assets/Donald Takayama bird sticker(16pc.).png"
+      "Img": "../assets/Donald Takayama bird sticker (16pc.).png"
     },
     {
       "id": 3,
       "Name": "Donald Takayama oval logo sticker (small)",
       "Price": 3.0,
-      "Img": "../assets/Donald Takayama oval logo sticker (small).png",
+      "Img": "../assets/Donald Takayama oval logo sticker (Small) .png",
       "Size": ["Yellow x Black", "Red x Black", "Blue x Black", "White x Black"]
     },
     {
@@ -91,7 +91,7 @@
       "id": 5,
       "Name": "DT109 - Donald Takayama L/S Surfers Choice Teriyaki - White",
       "Price": 39.95,
-      "Img": "../assets/DT109 - Donald Takayama L/S Surfers Choice Teriyaki - White.png",
+      "Img": "../assets/DT109 - Donald Takayama L:S Surfers Choice Teriyaki - White.png",
       "Size": ["Small", "Medium", "Large", "X-large", "XX-large"]
     },
     {
@@ -105,7 +105,7 @@
       "id": 7,
       "Name": "DT106 - Donald Takayama - Flag Tee - Burgundy S/S",
       "Price": 34.95,
-      "Img": "../assets/DT106 - Donald Takayama - Flag Tee - Burgundy S/S.png",
+      "Img": "../assets/DT106 - Donald Takayama - Flag Tee - Burgundy S:S.png",
       "Size": ["Small", "Medium", "Large", "X-large", "XX-large"]
     },
     {
