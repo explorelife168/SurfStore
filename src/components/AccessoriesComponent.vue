@@ -27,7 +27,7 @@
       <div class="menu-acc">
         <div class="item-01" v-for="product in products" :key="product.id">
           <div class="pic-acc-01">
-            <img :src="fn(product.Img)" />
+            <img :src="product.Img" />
           </div>
           <div class="product-name-acc">
             <h1>{{ product.Name }}</h1>
@@ -318,10 +318,10 @@ export default {
       //add sidemenu
       this.$store.dispatch("PRODUCT_ADD");
     },
-    fn(img) {
-      console.log(img);
-      return require("../assets/" + img);
-    },
+    // fn(img) {
+    //   console.log(img);
+    //   return require("../assets/" + img);
+    // },
   },
   mounted() {
     this.$store.dispatch("PRODUCT_READ");
