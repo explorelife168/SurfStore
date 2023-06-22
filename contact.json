@@ -54,72 +54,70 @@
       "id": 1,
       "Name": "Donald Takayama bird sticker",
       "Price": 3.0,
-      "Img": "../assets/Donald Takayama bird sticker.png",
-      "Size": {
-        "Color": [
-          "White",
-          "Red",
-          "Yellow",
-          "Dark Blue",
-          "Lite Blue",
-          "Green",
-          "Pink"
-        ]
-      }
+      "Img": "Donald Takayama bird sticker.png",
+      "Size": [
+        "White",
+        "Red",
+        "Yellow",
+        "Dark Blue",
+        "Lite Blue",
+        "Green",
+        "Pink"
+      ]
     },
     {
       "id": 2,
       "Name": "Donald Takayama bird sticker(16pc.)",
       "Price": 35.0,
-      "Img": "../assets/Donald Takayama bird sticker (16pc.).png"
+      "Img": "Donald Takayama bird sticker (16pc.).png"
     },
     {
       "id": 3,
       "Name": "Donald Takayama oval logo sticker (small)",
       "Price": 3.0,
-      "Img": "../assets/Donald Takayama oval logo sticker (Small) .png",
+      "Img": "Donald Takayama oval logo sticker (Small) .png",
       "Size": ["Yellow x Black", "Red x Black", "Blue x Black", "White x Black"]
     },
     {
       "id": 4,
       "Name": "DT108 - Donald Takayama Shaping (Photo by Thomas Campbell) - Vintage White",
       "Price": 34.95,
-      "Img": "../assets/DT108 - Donald Takayama Shaping (Photo by Thomas Campbell) - Vintage White.png",
+      "Img": "DT108 - Donald Takayama Shaping (Photo by Thomas Campbell) - Vintage White.png",
       "Size": ["Small", "Medium", "Large", "X-large", "XX-large"]
     },
     {
       "id": 5,
       "Name": "DT109 - Donald Takayama L/S Surfers Choice Teriyaki - White",
       "Price": 39.95,
-      "Img": "../assets/DT109 - Donald Takayama L:S Surfers Choice Teriyaki - White.png",
+      "Img": "DT109 - Donald Takayama L:S Surfers Choice Teriyaki - White.png",
       "Size": ["Small", "Medium", "Large", "X-large", "XX-large"]
     },
     {
       "id": 6,
       "Name": "Donald Takayama Hoody Zipper Sweatshirt - Yellow Oval",
       "Price": 69.95,
-      "Img": "../assets/Donald Takayama Hoody Zipper Sweatshirt - Yellow Oval.png",
+      "Img": "Donald Takayama Hoody Zipper Sweatshirt - Yellow Oval.png",
       "Size": ["Small", "Medium", "Large", "X-large", "XX-large"]
     },
     {
       "id": 7,
       "Name": "DT106 - Donald Takayama - Flag Tee - Burgundy S/S",
       "Price": 34.95,
-      "Img": "../assets/DT106 - Donald Takayama - Flag Tee - Burgundy S:S.png",
+      "Img": "DT106 - Donald Takayama - Flag Tee - Burgundy S:S.png",
       "Size": ["Small", "Medium", "Large", "X-large", "XX-large"]
     },
     {
       "id": 8,
       "Name": "DT107 - Donald Takayama oval tee (red oval logo) - Black",
       "Price": 39.95,
-      "Img": "../assets/DT107 - Donald Takayama oval tee (red oval logo) - Black.png",
+      "Img": "DT107 - Donald Takayama oval tee (red oval logo) - Black.png",
       "Size": ["Small", "Medium", "Large", "X-large", "XX-large"]
     },
     {
       "id": 9,
       "Name": "DT102 - Donald Takayama oval tee (red oval logo) - White",
       "Price": 34.95,
-      "Img": "../assets/DT102 - Donald Takayama oval tee (red oval logo) - White.png",
+      "Img": "DT102 - Donald Takayama oval tee (red oval logo) - White.png",
       "Size": ["Small", "Medium", "Large", "X-large", "XX-large"]
     }
   ]

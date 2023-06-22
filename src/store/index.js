@@ -8,6 +8,7 @@ const store = new Vuex.Store({
     contents: [],
     showModelControler: false,
     products: [],
+    isShow: true,
   },
   mutations: {
     setProducts(state, data) {
@@ -22,6 +23,9 @@ const store = new Vuex.Store({
     sideOffContent(state, data) {
       state.showModelControler = data;
     },
+    isShowContent(state, data) {
+      state.isShow = data;
+    },
   },
   actions: {
     PRODUCT_READ: (context) => {
@@ -29,8 +33,6 @@ const store = new Vuex.Store({
         context.commit("setProducts", res.data);
       });
     },
-  
-    
   },
 });
 export default store;
