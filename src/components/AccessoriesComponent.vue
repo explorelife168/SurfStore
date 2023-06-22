@@ -27,7 +27,7 @@
       <div class="menu-acc">
         <div class="item-01" v-for="product in products" :key="product.id">
           <div class="pic-acc-01">
-            <img :src="product.Img" />
+            <img :src="require(`../assets/${product.Img}`)" />
           </div>
           <div class="product-name-acc">
             <h1>{{ product.Name }}</h1>
@@ -35,14 +35,11 @@
           <div class="product-price-acc">
             <p>${{ product.Price }}</p>
           </div>
-          <div class="product-options-acc">
+          <div class="product-options-acc" v-show="isShow">
             <select name="bird sticker" id="">
-              <option value="" selected>White</option>
-              <option value="">Red</option>
-              <option value="">Dark Blue</option>
-              <option value="">Lite Blue</option>
-              <option value="">Green</option>
-              <option value="">Pink</option>
+              <option value="" v-for="item in product.Size" :key="item.id">
+                {{ Fe(item) }}
+              </option>
             </select>
           </div>
           <div class="input-button">
@@ -310,6 +307,9 @@ export default {
     products() {
       return this.$store.state.products;
     },
+    isShow() {
+      return this.$store.state.isShow;
+    },
   },
   methods: {
     showModelControler() {
@@ -318,10 +318,18 @@ export default {
       //add sidemenu
       this.$store.dispatch("PRODUCT_ADD");
     },
+
     // fn(img) {
     //   console.log(img);
     //   return require("../assets/" + img);
     // },
+
+    Fe(str) {
+      console.log(typeof str === "string");
+      if (typeof str === !"string") {
+        return str;
+      } else return this.$store.commit("isShowContent", false);
+    },
   },
   mounted() {
     this.$store.dispatch("PRODUCT_READ");
