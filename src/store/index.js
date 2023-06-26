@@ -5,26 +5,22 @@ import axios from "axios";
 const store = new Vuex.Store({
   strict: true,
   state: {
-    contents: [],
-    showModelControler: false,
+    carts: [],
+    showModelController: false,
     products: [],
-    isShow: true,
   },
   mutations: {
     setProducts(state, data) {
       state.products = data;
     },
-    addContact(state, data) {
-      state.contents.push(data);
+    addCarts(state, data) {
+      state.carts.push(data);
     },
     sideContent(state, data) {
-      state.showModelControler = data;
+      state.showModelController = data;
     },
     sideOffContent(state, data) {
-      state.showModelControler = data;
-    },
-    isShowContent(state, data) {
-      state.isShow = data;
+      state.showModelController = data;
     },
   },
   actions: {
@@ -33,6 +29,13 @@ const store = new Vuex.Store({
         context.commit("setProducts", res.data);
       });
     },
+    // PRODUCT_ADD: (context, { target }) => {
+    //   return axios
+    //     .post("http://localhost:3000/carts", { target })
+    //     .then((res) => {
+    //       context.commit("addCarts", res.data);
+    //     });
+    // },
   },
 });
 export default store;

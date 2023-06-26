@@ -1,7 +1,7 @@
 <template>
   <div class="side-menu">
     <transition name="fade">
-      <div class="box-shadow-content" v-show="showModelControler">
+      <div class="box-shadow-content" v-show="showModelController">
         <div class="fixed-box-1">
           <!-- 選單上層Cart字樣以及關閉按鈕 -->
           <div class="car-title">
@@ -9,7 +9,7 @@
               <h3>Cart</h3>
             </div>
             <div class="close-button">
-              <button @click="showOffModelControler">X</button>
+              <button @click="showOffModelController">X</button>
             </div>
           </div>
         </div>
@@ -17,25 +17,25 @@
           <!-- 清單 -->
           <div class="product-list">
             <ol>
-              <li>
+              <li v-for="cart in carts" :key="cart.id">
                 <!-- 購物車產品資訊(每項) -->
                 <div class="product-information">
                   <!-- 產品資訊第一層 -->
                   <div class="leval-one">
                     <!-- 產品照片 -->
                     <div class="product-pic">
-                      <img
-                        src="../static/Donald Takayama bird sticker (16pc.).png"
+                      <!-- <img
+                        :src="require(`../assets/${cart.target.Img}`)"
                         alt=""
-                      />
+                      /> -->
                     </div>
                     <!-- 產品名稱及規格 -->
                     <div class="product-name-size">
                       <div class="product-name">
-                        <p>Donald Takayama oval logo sticker (small)</p>
+                        <!-- <p>{{ cart.target.Name }}</p> -->
                       </div>
                       <div class="product-size">
-                        <p>Yellow x Black</p>
+                        <!-- <p>{{ Size }}</p> -->
                       </div>
                     </div>
                   </div>
@@ -51,7 +51,7 @@
                       </div>
                       <!-- 產品價格 -->
                       <div class="product-price">
-                        <p>$12.3</p>
+                        <!-- <p>{{ cart.Price }}</p> -->
                       </div>
                     </div>
                   </div>
@@ -91,12 +91,15 @@ export default {
     return {};
   },
   computed: {
-    showModelControler() {
-      return this.$store.state.showModelControler;
+    showModelController() {
+      return this.$store.state.showModelController;
+    },
+    carts() {
+      return this.$store.state.carts;
     },
   },
   methods: {
-    showOffModelControler() {
+    showOffModelController() {
       this.$store.commit("sideOffContent", false);
     },
   },
@@ -170,13 +173,13 @@ export default {
       z-index: 1;
       .product-list {
         overflow: auto;
+
         li {
           list-style: none;
           .product-information {
             margin: 5px 0;
             // 產品資訊第一層
             .leval-one {
-              height: 75px;
               display: flex;
               justify-content: space-around;
               align-items: center;

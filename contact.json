@@ -53,7 +53,7 @@
     {
       "id": 1,
       "Name": "Donald Takayama bird sticker",
-      "Price": 3.0,
+      "Price": 3,
       "Img": "Donald Takayama bird sticker.png",
       "Size": [
         "White",
@@ -68,13 +68,13 @@
     {
       "id": 2,
       "Name": "Donald Takayama bird sticker(16pc.)",
-      "Price": 35.0,
+      "Price": 35,
       "Img": "Donald Takayama bird sticker (16pc.).png"
     },
     {
       "id": 3,
       "Name": "Donald Takayama oval logo sticker (small)",
-      "Price": 3.0,
+      "Price": 3,
       "Img": "Donald Takayama oval logo sticker (Small) .png",
       "Size": ["Yellow x Black", "Red x Black", "Blue x Black", "White x Black"]
     },
@@ -120,5 +120,6 @@
       "Img": "DT102 - Donald Takayama oval tee (red oval logo) - White.png",
       "Size": ["Small", "Medium", "Large", "X-large", "XX-large"]
     }
-  ]
+  ],
+  "carts": [{}]
 }

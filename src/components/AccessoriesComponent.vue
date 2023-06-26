@@ -25,7 +25,11 @@
         <h3>Buy Online</h3>
       </div>
       <div class="menu-acc">
-        <div class="item-01" v-for="product in products" :key="product.id">
+        <div
+          class="item-01"
+          v-for="(product, index) in products"
+          :key="product.id"
+        >
           <div class="pic-acc-01">
             <img :src="require(`../assets/${product.Img}`)" />
           </div>
@@ -35,10 +39,10 @@
           <div class="product-price-acc">
             <p>${{ product.Price }}</p>
           </div>
-          <div class="product-options-acc" v-show="isShow">
+          <div class="product-options-acc" v-show="product.Size">
             <select name="bird sticker" id="">
               <option value="" v-for="item in product.Size" :key="item.id">
-                {{ Fe(item) }}
+                {{ item }}
               </option>
             </select>
           </div>
@@ -47,257 +51,27 @@
               <input type="text" value="1" required />
             </div>
             <div class="add-button">
-              <button>ADD TO CART</button>
+              <button
+                @click="
+                  showModelController();
+                  addInCarts(index);
+                "
+              >
+                ADD TO CART
+              </button>
             </div>
           </div>
         </div>
-        <!-- <div class="item-02">
-          <div class="pic-acc-02">
-            <img src="../Pic/Donald Takayama bird sticker (16pc.).png" alt="" />
-          </div>
-          <div class="product-name-acc">
-            <h1>Donald Takayama bird sticker(16pc.)</h1>
-          </div>
-          <div class="product-price-acc">
-            <p>$35.00</p>
-          </div>
-          <div class="input-button">
-            <div class="quantity">
-              <input type="text" value="1" required />
-            </div>
-            <div class="add-button">
-              <button>ADD TO CART</button>
-            </div>
-          </div>
-        </div> -->
-        <!-- <div class="item-03" >
-          <div class="pic-acc-03">
-            <img
-              src="../Pic/Donald Takayama oval logo sticker (Small) .png"
-              alt=""
-            />
-          </div>
-          <div class="product-name-acc">
-            <h1>{{ item.Name }}</h1>
-          </div>
-          <div class="product-price-acc">
-            <p>${{ item.Pirce }}</p>
-          </div>
-          <div class="product-options-acc">
-            <select
-              name="circle sticker"
-              id=""
-              v-for="Color in Size"
-              :key="Color.id"
-            >
-              <option value="" selected>{{ Color.Color }}</option>
-            </select>
-          </div>
-          <div class="input-button">
-            <div class="quantity">
-              <input type="text" value="1" required />
-            </div>
-            
-            <div class="add-button">
-              <button>ADD TO CART</button>
-            </div>
-          </div>
-        </div> -->
-        <!-- <div class="item-04">
-          <div class="pic-acc-04">
-            <img
-              src="../Pic/DT108 - Donald Takayama Shaping (Photo by Thomas Campbell) - Vintage White.png"
-              alt=""
-            />
-          </div>
-          <div class="product-name-acc">
-            <h1>
-              DT108 - Donald Takayama Shaping (Photo by Thomas Campbell) -
-              Vintage White
-            </h1>
-          </div>
-          <div class="product-price-acc">
-            <p>$34.95</p>
-          </div>
-          <div class="product-options-acc">
-            <select name="T-Shirt" id="">
-              <option value="" selected>Small</option>
-              <option value="">Medium</option>
-              <option value="">Large</option>
-              <option value="">X-large</option>
-              <option value="">XX-large</option>
-            </select>
-          </div>
-          <div class="input-button">
-            <div class="quantity">
-              <input type="text" value="1" required />
-            </div>
-            <div class="add-button">
-              <button>ADD TO CART</button>
-            </div>
-          </div>
-        </div> -->
-        <!-- <div class="item-05">
-          <div class="pic-acc-05">
-            <img
-              src="../Pic/DT109 - Donald Takayama L:S Surfers Choice Teriyaki - White.png"
-              alt=""
-            />
-          </div>
-          <div class="product-name-acc">
-            <h1>DT109 - Donald Takayama L/S Surfers Choice Teriyaki - White</h1>
-          </div>
-          <div class="product-price-acc">
-            <p>$39.95</p>
-          </div>
-          <div class="product-options-acc">
-            <select name="T-Shirt" id="">
-              <option value="" selected>Small</option>
-              <option value="">Medium</option>
-              <option value="">Large</option>
-              <option value="">X-large</option>
-              <option value="">XX-large</option>
-            </select>
-          </div>
-          <div class="input-button">
-            <div class="quantity">
-              <input type="text" value="1" required />
-            </div>
-            <div class="add-button">
-              <button>ADD TO CART</button>
-            </div>
-          </div>
-        </div> -->
-        <!-- <div class="item-06">
-          <div class="pic-acc-06">
-            <img
-              src="../Pic/Donald Takayama Hoody Zipper Sweatshirt - Yellow Oval.png"
-              alt=""
-            />
-          </div>
-          <div class="product-name-acc">
-            <h1>Donald Takayama Hoody Zipper Sweatshirt - Yellow Oval</h1>
-          </div>
-          <div class="product-price-acc">
-            <p>$69.95</p>
-          </div>
-          <div class="product-options-acc">
-            <select name="T-Shirt" id="">
-              <option value="" selected>Small</option>
-              <option value="">Medium</option>
-              <option value="">Large</option>
-              <option value="">X-large</option>
-              <option value="">XX-large</option>
-            </select>
-          </div>
-          <div class="input-button">
-            <div class="quantity">
-              <input type="text" value="1" required />
-            </div>
-            <div class="add-button">
-              <button>ADD TO CART</button>
-            </div>
-          </div>
-        </div> -->
-        <!-- <div class="item-07">
-          <div class="pic-acc-07">
-            <img
-              src="../Pic/DT106 - Donald Takayama - Flag Tee - Burgundy S:S.png"
-              alt=""
-            />
-          </div>
-          <div class="product-name-acc">
-            <h1>DT106 - Donald Takayama - Flag Tee - Burgundy S/S</h1>
-          </div>
-          <div class="product-price-acc">
-            <p>$34.95</p>
-          </div>
-          <div class="product-options-acc">
-            <select name="T-Shirt" id="">
-              <option value="" selected>Small</option>
-              <option value="">Medium</option>
-              <option value="">Large</option>
-              <option value="">X-large</option>
-              <option value="">XX-large</option>
-            </select>
-          </div>
-          <div class="input-button">
-            <div class="quantity">
-              <input type="text" value="1" required />
-            </div>
-            <div class="add-button">
-              <button>ADD TO CART</button>
-            </div>
-          </div>
-        </div> -->
-        <!-- <div class="item-08">
-          <div class="pic-acc-08">
-            <img
-              src="../Pic/DT107 - Donald Takayama oval tee (red oval logo) - Black.png"
-              alt=""
-            />
-          </div>
-          <div class="product-name-acc">
-            <h1>DT107 - Donald Takayama oval tee (red oval logo) - Black</h1>
-          </div>
-          <div class="product-price-acc">
-            <p>$39.95</p>
-          </div>
-          <div class="product-options-acc">
-            <select name="T-Shirt" id="">
-              <option value="" selected>Small</option>
-              <option value="">Medium</option>
-              <option value="">Large</option>
-              <option value="">X-large</option>
-              <option value="">XX-large</option>
-            </select>
-          </div>
-          <div class="input-button">
-            <div class="quantity">
-              <input type="text" value="1" required />
-            </div>
-            <div class="add-button">
-              <button>ADD TO CART</button>
-            </div>
-          </div>
-        </div> -->
-        <!-- <div class="item-09">
-          <div class="pic-acc-09">
-            <img
-              src="../Pic/DT102 - Donald Takayama oval tee (red oval logo) - White.png"
-              alt=""
-            />
-          </div>
-          <div class="product-name-acc">
-            <h1>DT102 - Donald Takayama oval tee (red oval logo) - White</h1>
-          </div>
-          <div class="product-price-acc">
-            <p>$34.95</p>
-          </div>
-          <div class="product-options-acc">
-            <select name="T-Shirt" id="">
-              <option value="" selected>Small</option>
-              <option value="">Medium</option>
-              <option value="">Large</option>
-              <option value="">X-large</option>
-              <option value="">XX-large</option>
-            </select>
-          </div>
-          <div class="input-button">
-            <div class="quantity">
-              <input type="text" value="1" required />
-            </div>
-            <div class="add-button">
-              <button>ADD TO CART</button>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Vue from "vue";
+import axios from "axios";
+import VueAxios from "vue-axios";
+Vue.use(VueAxios, axios);
 export default {
   name: "AccessoriesComponent",
   data: function () {
@@ -307,29 +81,27 @@ export default {
     products() {
       return this.$store.state.products;
     },
-    isShow() {
-      return this.$store.state.isShow;
-    },
   },
   methods: {
-    showModelControler() {
+    showModelController() {
       //sidemenu-switch
       this.$store.commit("sideContent", true);
       //add sidemenu
-      this.$store.dispatch("PRODUCT_ADD");
     },
+    addInCarts(index) {
+      let target = this.products[index];
+      axios.post("http://localhost:3000/carts", { target }).then((res) => {
+        this.$store.commit("addCarts", res.data);
+      });
+    },
+    // addItem(index) {
+    //   console.log(index);
+    // },
 
     // fn(img) {
     //   console.log(img);
     //   return require("../assets/" + img);
     // },
-
-    Fe(str) {
-      console.log(typeof str === "string");
-      if (typeof str === "string") {
-        return str;
-      } else return this.$store.commit("isShowContent", false);
-    },
   },
   mounted() {
     this.$store.dispatch("PRODUCT_READ");
@@ -442,431 +214,6 @@ export default {
           }
         }
       }
-      // .item-02 {
-      //   max-width: 240px;
-      //   .pic-acc-02 {
-      //     img {
-      //       width: 240px;
-      //     }
-      //   }
-      //   .product-name-acc {
-      //     width: 240px;
-      //     h1 {
-      //       font-size: 18px;
-      //     }
-      //   }
-      //   .product-price-acc {
-      //     p {
-      //       font-size: 14px;
-      //       margin: 10px 0;
-      //       font-weight: 100px;
-      //     }
-      //   }
-      //   .input-button {
-      //     display: flex;
-      //     margin: 20px 0;
-      //     width: 240px;
-      //     .quantity {
-      //       input {
-      //         text-align: center;
-      //         width: 50px;
-      //         height: 40px;
-      //         font-size: 16px;
-      //       }
-      //     }
-      //     .add-button {
-      //       button {
-      //         width: 190px;
-      //         height: 40px;
-      //         background-color: rgb(110, 173, 92);
-      //         color: white;
-      //         border: none;
-      //         font-size: 16px;
-      //       }
-      //       button:hover {
-      //         background-color: rgb(128, 189, 111);
-      //       }
-      //     }
-      //   }
-      // }
-      // .item-03 {
-      //   max-width: 240px;
-      //   .pic-acc-03 {
-      //     img {
-      //       width: 240px;
-      //     }
-      //   }
-      //   .product-name-acc {
-      //     width: 240px;
-      //     h1 {
-      //       font-size: 18px;
-      //     }
-      //   }
-      //   .product-price-acc {
-      //     p {
-      //       font-size: 14px;
-      //       margin: 10px 0;
-      //       font-weight: 100px;
-      //     }
-      //   }
-      //   .product-options-acc {
-      //     select {
-      //       width: 240px;
-      //       height: 30px;
-      //     }
-      //   }
-      //   .input-button {
-      //     display: flex;
-      //     margin: 20px 0;
-      //     width: 240px;
-      //     .quantity {
-      //       input {
-      //         text-align: center;
-      //         width: 50px;
-      //         height: 40px;
-      //         font-size: 16px;
-      //       }
-      //     }
-      //     .add-button {
-      //       button {
-      //         width: 190px;
-      //         height: 40px;
-      //         background-color: rgb(110, 173, 92);
-      //         color: white;
-      //         border: none;
-      //         font-size: 16px;
-      //       }
-      //       button:hover {
-      //         background-color: rgb(128, 189, 111);
-      //       }
-      //     }
-      //   }
-      // }
-
-      // .item-04 {
-      //   margin: 25px 0;
-      //   max-width: 240px;
-      //   .pic-acc-04 {
-      //     img {
-      //       width: 240px;
-      //     }
-      //   }
-      //   .product-name-acc {
-      //     width: 240px;
-      //     h1 {
-      //       font-size: 18px;
-      //     }
-      //   }
-      //   .product-price-acc {
-      //     p {
-      //       font-size: 14px;
-      //       margin: 10px 0;
-      //       font-weight: 100px;
-      //     }
-      //   }
-      //   .product-options-acc {
-      //     select {
-      //       width: 240px;
-      //       height: 30px;
-      //     }
-      //   }
-      //   .input-button {
-      //     display: flex;
-      //     margin: 20px 0;
-      //     width: 240px;
-      //     .quantity {
-      //       input {
-      //         text-align: center;
-      //         width: 50px;
-      //         height: 40px;
-      //         font-size: 16px;
-      //       }
-      //     }
-      //     .add-button {
-      //       button {
-      //         width: 190px;
-      //         height: 40px;
-      //         background-color: rgb(110, 173, 92);
-      //         color: white;
-      //         border: none;
-      //         font-size: 16px;
-      //       }
-      //       button:hover {
-      //         background-color: rgb(128, 189, 111);
-      //       }
-      //     }
-      //   }
-      // }
-      // .item-05 {
-      //   max-width: 240px;
-      //   margin: 25px 0;
-      //   .pic-acc-05 {
-      //     img {
-      //       width: 240px;
-      //     }
-      //   }
-      //   .product-name-acc {
-      //     width: 240px;
-      //     h1 {
-      //       font-size: 18px;
-      //     }
-      //   }
-      //   .product-price-acc {
-      //     p {
-      //       font-size: 14px;
-      //       margin: 10px 0;
-      //       font-weight: 100px;
-      //     }
-      //   }
-      //   .product-options-acc {
-      //     select {
-      //       width: 240px;
-      //       height: 30px;
-      //     }
-      //   }
-      //   .input-button {
-      //     display: flex;
-      //     margin: 20px 0;
-      //     width: 240px;
-      //     .quantity {
-      //       input {
-      //         text-align: center;
-      //         width: 50px;
-      //         height: 40px;
-      //         font-size: 16px;
-      //       }
-      //     }
-      //     .add-button {
-      //       button {
-      //         width: 190px;
-      //         height: 40px;
-      //         background-color: rgb(110, 173, 92);
-      //         color: white;
-      //         border: none;
-      //         font-size: 16px;
-      //       }
-      //       button:hover {
-      //         background-color: rgb(128, 189, 111);
-      //       }
-      //     }
-      //   }
-      // }
-      // .item-06 {
-      //   max-width: 240px;
-      //   margin: 25px 0;
-      //   .pic-acc-06 {
-      //     img {
-      //       width: 240px;
-      //     }
-      //   }
-      //   .product-name-acc {
-      //     width: 240px;
-      //     h1 {
-      //       font-size: 18px;
-      //     }
-      //   }
-      //   .product-price-acc {
-      //     p {
-      //       font-size: 14px;
-      //       margin: 10px 0;
-      //       font-weight: 100px;
-      //     }
-      //   }
-      //   .product-options-acc {
-      //     select {
-      //       width: 240px;
-      //       height: 30px;
-      //     }
-      //   }
-      //   .input-button {
-      //     display: flex;
-      //     margin: 20px 0;
-      //     width: 240px;
-      //     .quantity {
-      //       input {
-      //         text-align: center;
-      //         width: 50px;
-      //         height: 40px;
-      //         font-size: 16px;
-      //       }
-      //     }
-      //     .add-button {
-      //       button {
-      //         width: 190px;
-      //         height: 40px;
-      //         background-color: rgb(110, 173, 92);
-      //         color: white;
-      //         border: none;
-      //         font-size: 16px;
-      //       }
-      //       button:hover {
-      //         background-color: rgb(128, 189, 111);
-      //       }
-      //     }
-      //   }
-      // }
-      // .item-07 {
-      //   margin: 25px 0;
-      //   max-width: 240px;
-      //   .pic-acc-07 {
-      //     img {
-      //       width: 240px;
-      //     }
-      //   }
-      //   .product-name-acc {
-      //     width: 240px;
-      //     h1 {
-      //       font-size: 18px;
-      //     }
-      //   }
-      //   .product-price-acc {
-      //     p {
-      //       font-size: 14px;
-      //       margin: 10px 0;
-      //       font-weight: 100px;
-      //     }
-      //   }
-      //   .product-options-acc {
-      //     select {
-      //       width: 240px;
-      //       height: 30px;
-      //     }
-      //   }
-      //   .input-button {
-      //     display: flex;
-      //     margin: 20px 0;
-      //     width: 240px;
-      //     .quantity {
-      //       input {
-      //         text-align: center;
-      //         width: 50px;
-      //         height: 40px;
-      //         font-size: 16px;
-      //       }
-      //     }
-      //     .add-button {
-      //       button {
-      //         width: 190px;
-      //         height: 40px;
-      //         background-color: rgb(110, 173, 92);
-      //         color: white;
-      //         border: none;
-      //         font-size: 16px;
-      //       }
-      //       button:hover {
-      //         background-color: rgb(128, 189, 111);
-      //       }
-      //     }
-      //   }
-      // }
-      // .item-08 {
-      //   max-width: 240px;
-      //   margin: 25px 0;
-      //   .pic-acc-08 {
-      //     img {
-      //       width: 240px;
-      //     }
-      //   }
-      //   .product-name-acc {
-      //     width: 240px;
-      //     h1 {
-      //       font-size: 18px;
-      //     }
-      //   }
-      //   .product-price-acc {
-      //     p {
-      //       font-size: 14px;
-      //       margin: 10px 0;
-      //       font-weight: 100px;
-      //     }
-      //   }
-      //   .product-options-acc {
-      //     select {
-      //       width: 240px;
-      //       height: 30px;
-      //     }
-      //   }
-      //   .input-button {
-      //     display: flex;
-      //     margin: 20px 0;
-      //     width: 240px;
-      //     .quantity {
-      //       input {
-      //         text-align: center;
-      //         width: 50px;
-      //         height: 40px;
-      //         font-size: 16px;
-      //       }
-      //     }
-      //     .add-button {
-      //       button {
-      //         width: 190px;
-      //         height: 40px;
-      //         background-color: rgb(110, 173, 92);
-      //         color: white;
-      //         border: none;
-      //         font-size: 16px;
-      //       }
-      //       button:hover {
-      //         background-color: rgb(128, 189, 111);
-      //       }
-      //     }
-      //   }
-      // }
-      // .item-09 {
-      //   max-width: 240px;
-      //   margin: 25px 0;
-      //   .pic-acc-09 {
-      //     img {
-      //       width: 240px;
-      //     }
-      //   }
-      //   .product-name-acc {
-      //     width: 240px;
-      //     h1 {
-      //       font-size: 18px;
-      //     }
-      //   }
-      //   .product-price-acc {
-      //     p {
-      //       font-size: 14px;
-      //       margin: 10px 0;
-      //       font-weight: 100px;
-      //     }
-      //   }
-      //   .product-options-acc {
-      //     select {
-      //       width: 240px;
-      //       height: 30px;
-      //     }
-      //   }
-      //   .input-button {
-      //     display: flex;
-      //     margin: 20px 0;
-      //     width: 240px;
-      //     .quantity {
-      //       input {
-      //         text-align: center;
-      //         width: 50px;
-      //         height: 40px;
-      //         font-size: 16px;
-      //       }
-      //     }
-      //     .add-button {
-      //       button {
-      //         width: 190px;
-      //         height: 40px;
-      //         background-color: rgb(110, 173, 92);
-      //         color: white;
-      //         border: none;
-      //         font-size: 16px;
-      //       }
-      //       button:hover {
-      //         background-color: rgb(128, 189, 111);
-      //       }
-      //     }
-      //   }
-      // }
     }
   }
 }
