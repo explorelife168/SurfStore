@@ -326,7 +326,7 @@ export default {
 
     Fe(str) {
       console.log(typeof str === "string");
-      if (typeof str === !"string") {
+      if (typeof str === "string") {
         return str;
       } else return this.$store.commit("isShowContent", false);
     },
