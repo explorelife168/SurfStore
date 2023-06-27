@@ -17,25 +17,33 @@
           <!-- 清單 -->
           <div class="product-list">
             <ol>
-              <li v-for="cart in carts" :key="cart.id">
+              <li v-for="(cart, index) in carts" :key="cart.id">
                 <!-- 購物車產品資訊(每項) -->
                 <div class="product-information">
                   <!-- 產品資訊第一層 -->
                   <div class="leval-one">
                     <!-- 產品照片 -->
                     <div class="product-pic">
-                      <!-- <img
+                      <img
                         :src="require(`../assets/${cart.target.Img}`)"
                         alt=""
-                      /> -->
+                      />
                     </div>
                     <!-- 產品名稱及規格 -->
                     <div class="product-name-size">
                       <div class="product-name">
-                        <!-- <p>{{ cart.target.Name }}</p> -->
+                        <p>{{ cart.target.Name }}</p>
                       </div>
-                      <div class="product-size">
-                        <!-- <p>{{ Size }}</p> -->
+                      <div class="product-size" v-show="cart.target.Size">
+                        <select name="size" id="">
+                          <option
+                            value=""
+                            v-for="size in cart.target.Size"
+                            :key="size.id"
+                          >
+                            {{ size }}
+                          </option>
+                        </select>
                       </div>
                     </div>
                   </div>
@@ -45,13 +53,17 @@
                     <div class="product-quantity-price">
                       <!-- 產品數量 -->
                       <div class="product-quantity">
-                        <button>+</button>
-                        <input type="text" value="1" />
                         <button>-</button>
+                        <input
+                          type="text"
+                          :value="cart.target.quantity"
+                          :id="cart.id"
+                        />
+                        <button @click="plus(index)">+</button>
                       </div>
                       <!-- 產品價格 -->
                       <div class="product-price">
-                        <!-- <p>{{ cart.Price }}</p> -->
+                        <p>$ {{ cart.target.Price }}</p>
                       </div>
                     </div>
                   </div>
@@ -101,6 +113,13 @@ export default {
   methods: {
     showOffModelController() {
       this.$store.commit("sideOffContent", false);
+    },
+    plus(index) {
+      let plusTarget = this.carts[index];
+      let qua = (plusTarget.target.quantity += 1);
+      console.log(plusTarget);
+      console.log(qua);
+      this.$store.commit("plusCarts", { qua });
     },
   },
 };
@@ -198,6 +217,8 @@ export default {
                   }
                 }
                 .product-size {
+                  margin: 5px 0;
+
                   p {
                     font-size: 9px;
                   }

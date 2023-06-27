@@ -16,6 +16,9 @@ const store = new Vuex.Store({
     addCarts(state, data) {
       state.carts.push(data);
     },
+    plusCarts(state, { qua }) {
+      state.carts.quantity = qua;
+    },
     sideContent(state, data) {
       state.showModelController = data;
     },
@@ -29,13 +32,6 @@ const store = new Vuex.Store({
         context.commit("setProducts", res.data);
       });
     },
-    // PRODUCT_ADD: (context, { target }) => {
-    //   return axios
-    //     .post("http://localhost:3000/carts", { target })
-    //     .then((res) => {
-    //       context.commit("addCarts", res.data);
-    //     });
-    // },
   },
 });
 export default store;

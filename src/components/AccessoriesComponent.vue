@@ -40,7 +40,7 @@
             <p>${{ product.Price }}</p>
           </div>
           <div class="product-options-acc" v-show="product.Size">
-            <select name="bird sticker" id="">
+            <select name="" id="">
               <option value="" v-for="item in product.Size" :key="item.id">
                 {{ item }}
               </option>
@@ -90,18 +90,8 @@ export default {
     },
     addInCarts(index) {
       let target = this.products[index];
-      axios.post("http://localhost:3000/carts", { target }).then((res) => {
-        this.$store.commit("addCarts", res.data);
-      });
+      this.$store.commit("addCarts", { target });
     },
-    // addItem(index) {
-    //   console.log(index);
-    // },
-
-    // fn(img) {
-    //   console.log(img);
-    //   return require("../assets/" + img);
-    // },
   },
   mounted() {
     this.$store.dispatch("PRODUCT_READ");
