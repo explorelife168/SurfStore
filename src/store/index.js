@@ -17,6 +17,7 @@ const store = new Vuex.Store({
       state.products = data;
     },
     addCarts(state, data) {
+      console.log(data);
       if (state.carts.indexOf(data) != -1) return;
       data.quantity = parseInt(data.quantityKey);
       state.carts.push(data);
@@ -42,6 +43,7 @@ const store = new Vuex.Store({
     //購物車開啟
     sideContent(state, data) {
       state.showModelController = data;
+      state.showCartModelController = !data;
     },
     //購物車關閉
     sideOffContent(state, data) {

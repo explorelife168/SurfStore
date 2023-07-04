@@ -51,14 +51,7 @@
               <input type="text" v-model="product.quantityKey" required />
             </div>
             <div class="add-button">
-              <button
-                @click="
-                  showModelController();
-                  addInCarts(index);
-                "
-              >
-                ADD TO CART
-              </button>
+              <button @click="addInCarts(index)">ADD TO CART</button>
             </div>
           </div>
         </div>
@@ -71,6 +64,7 @@
 import Vue from "vue";
 import axios from "axios";
 import VueAxios from "vue-axios";
+import { mapState, mapMutations } from "vuex";
 Vue.use(VueAxios, axios);
 export default {
   name: "AccessoriesComponent",
@@ -78,18 +72,29 @@ export default {
     return {};
   },
   computed: {
-    products() {
-      return this.$store.state.products;
-    },
+    ...mapState([
+      "showCartModelController",
+      "showModelController",
+      "carts",
+      "products",
+    ]),
   },
   methods: {
-    showModelController() {
-      //sidemenu-switch
-      this.$store.commit("sideContent", true);
-      //add sidemenu
-    },
+    ...mapMutations([
+      "addCarts",
+      "sideContent",
+      "sideCartOffContent",
+      "sideOffContent",
+    ]),
+    // showModelController() {
+    //   console.log("aaaa");
+    //   //sidemenu-switch
+    // this.sideContent(!this.showModelController);
+    //   //add sidemenu
+    // },
     addInCarts(index) {
-      this.$store.commit("addCarts", this.products[index]);
+      this.addCarts(this.products[index]);
+      this.sideContent(true);
     },
   },
   mounted() {

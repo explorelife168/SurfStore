@@ -113,7 +113,12 @@ export default {
     return {};
   },
   computed: {
-    ...mapState(["carts", "showModelController", "totalPrice"]),
+    ...mapState([
+      "carts",
+      "showCartModelController",
+      "showModelController",
+      "totalPrice",
+    ]),
     // showModelController() {
     //   return this.$store.state.showModelController;
     // },
@@ -122,10 +127,16 @@ export default {
     // },
   },
   methods: {
-    ...mapMutations(["plusCarts", "inputCarts", "sideOffContent"]),
+    ...mapMutations([
+      "plusCarts",
+      "inputCarts",
+      "sideOffContent",
+      "sideCartOffContent",
+    ]),
 
     showOffModelController() {
       this.sideOffContent(false);
+      this.sideCartOffContent(!this.showCartModelController);
       // this.$store.commit("sideOffContent", false);
     },
 

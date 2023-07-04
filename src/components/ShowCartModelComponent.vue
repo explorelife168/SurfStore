@@ -1,7 +1,8 @@
 <template>
-  <div class="show-side-menu">
+  <div class="show-side-menu" v-show="showCartModelController">
     <button class="btn" @click="showCartOffModelController">
-      <i class="fa-solid fa-cart-shopping"></i>
+      <p>{{ carts.length }}</p>
+      <i class="fa-solid fa-cart-shopping fa-2x"></i>
     </button>
   </div>
 </template>
@@ -14,16 +15,13 @@ export default {
     return {};
   },
   computed: {
-    ...mapState(["showCartModelController", "showModelController"]),
+    ...mapState(["showCartModelController", "showModelController", "carts"]),
   },
   methods: {
-    ...mapMutations(["sideCartOffContent", "sideCartOffContent"]),
-
+    ...mapMutations(["sideCartOffContent", "sideOffContent"]),
     showCartOffModelController() {
-      console.log("click");
-      this.sideCartOffContent(false);
-
-      // this.sideOffContent(!this.state.showModelController);
+      this.sideCartOffContent(!this.showCartModelController);
+      this.sideOffContent(!this.showModelController);
     },
   },
 };
@@ -37,13 +35,26 @@ export default {
 
 .show-side-menu {
   .btn {
-    background-color: white;
+    background-color: rgb(110, 173, 92);
     position: fixed;
     top: 300px;
     right: 0;
     z-index: 2;
-    width: 30px;
+    width: 40px;
     height: 70px;
+    color: white;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    text-align: top;
+
+    p {
+      font-size: 18px;
+      color: white;
+      margin-bottom: 10px;
+    }
+  }
+  .btn:hover {
+    background-color: rgb(128, 189, 111);
   }
 }
 </style>
