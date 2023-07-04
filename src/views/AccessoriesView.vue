@@ -3,6 +3,7 @@
     <NavComponent />
     <AccessoriesComponent />
     <ShowModelComponent />
+    <ShowCartModelComponent />
     <FootComponent />
   </div>
 </template>
@@ -11,6 +12,7 @@
 import NavComponent from "@/components/NavComponent.vue";
 import AccessoriesComponent from "../components/AccessoriesComponent.vue";
 import ShowModelComponent from "../components/ShowModelComponent.vue";
+import ShowCartModelComponent from "../components/ShowCartModelComponent.vue";
 import FootComponent from "@/components/FootComponent.vue";
 export default {
   name: "AccessoriesView",
@@ -18,6 +20,7 @@ export default {
     NavComponent,
     AccessoriesComponent,
     ShowModelComponent,
+    ShowCartModelComponent,
     FootComponent,
   },
 };

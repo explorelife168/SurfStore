@@ -24,22 +24,19 @@
                   <div class="leval-one">
                     <!-- 產品照片 -->
                     <div class="product-pic">
-                      <img
-                        :src="require(`../assets/${cart.target.Img}`)"
-                        alt=""
-                      />
+                      <img :src="require(`../assets/${cart.Img}`)" alt="" />
                     </div>
                     <!-- 產品名稱及規格 -->
                     <div class="product-name-size">
                       <div class="product-name">
-                        <p>{{ cart.target.Name }}</p>
+                        <p>{{ cart.Name }}</p>
                       </div>
-                      <div class="product-size" v-show="cart.target.Size">
+                      <div class="product-size" v-if="cart.Size">
                         <select name="size" id="">
                           <option
                             value=""
-                            v-for="size in cart.target.Size"
-                            :key="size.id"
+                            v-for="size in cart.Size"
+                            :key="size"
                           >
                             {{ size }}
                           </option>
@@ -53,17 +50,29 @@
                     <div class="product-quantity-price">
                       <!-- 產品數量 -->
                       <div class="product-quantity">
-                        <button>-</button>
+                        <button
+                          @click="
+                            valueController(index, -1, -carts[index].Price)
+                          "
+                        >
+                          -
+                        </button>
                         <input
-                          type="text"
-                          :value="cart.target.quantity"
+                          @change="(e) => inputHandler(e, index)"
+                          :value="cart.quantity"
                           :id="cart.id"
                         />
-                        <button @click="plus(index)">+</button>
+                        <button
+                          @click="
+                            valueController(index, 1, +carts[index].Price)
+                          "
+                        >
+                          +
+                        </button>
                       </div>
                       <!-- 產品價格 -->
                       <div class="product-price">
-                        <p>$ {{ cart.target.Price }}</p>
+                        <p>$ {{ cart.Price }}</p>
                       </div>
                     </div>
                   </div>
@@ -79,7 +88,7 @@
               <p>SUBTOTAL</p>
             </div>
             <div class="total-price">
-              <p>$123.000</p>
+              <p>${{ totalPrice }}</p>
             </div>
           </div>
           <!-- 產品折扣 -->
@@ -97,29 +106,45 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from "vuex";
 export default {
   name: "showModelComponent",
   data: function () {
     return {};
   },
   computed: {
-    showModelController() {
-      return this.$store.state.showModelController;
-    },
-    carts() {
-      return this.$store.state.carts;
-    },
+    ...mapState(["carts", "showModelController", "totalPrice"]),
+    // showModelController() {
+    //   return this.$store.state.showModelController;
+    // },
+    // carts() {
+    //   return this.$store.state.carts;
+    // },
   },
   methods: {
+    ...mapMutations(["plusCarts", "inputCarts", "sideOffContent"]),
+
     showOffModelController() {
-      this.$store.commit("sideOffContent", false);
+      this.sideOffContent(false);
+      // this.$store.commit("sideOffContent", false);
     },
-    plus(index) {
-      let plusTarget = this.carts[index];
-      let qua = (plusTarget.target.quantity += 1);
-      console.log(plusTarget);
-      console.log(qua);
-      this.$store.commit("plusCarts", { qua });
+
+    valueController(index, val, total) {
+      this.plusCarts({ index, val, total });
+    },
+    inputHandler(e, index) {
+      if (
+        !isNaN(e.target.value) &&
+        e.target.value.length != 0 &&
+        e.target.value != 0 &&
+        e.target.value > 0 &&
+        e.target.value % 1 === 0
+      ) {
+        this.inputCarts({ index, value: parseInt(e.target.value) });
+      } else {
+        alert("請輸入數字");
+        e.target.value = this.carts[index].quantity;
+      }
     },
   },
 };

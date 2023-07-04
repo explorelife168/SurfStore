@@ -48,7 +48,7 @@
           </div>
           <div class="input-button">
             <div class="quantity">
-              <input type="text" value="1" required />
+              <input type="text" v-model="product.quantityKey" required />
             </div>
             <div class="add-button">
               <button
@@ -89,8 +89,7 @@ export default {
       //add sidemenu
     },
     addInCarts(index) {
-      let target = this.products[index];
-      this.$store.commit("addCarts", { target });
+      this.$store.commit("addCarts", this.products[index]);
     },
   },
   mounted() {

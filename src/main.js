@@ -4,6 +4,8 @@ import router from "./router";
 import axios from "axios";
 import VueAxios from "vue-axios";
 import store from "./store/index";
+import "@fortawesome/fontawesome-free/css/all.css";
+import "@fortawesome/fontawesome-free/js/all.js";
 
 Vue.config.productionTip = false;
 Vue.use(VueAxios, axios);
