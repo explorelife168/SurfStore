@@ -14,13 +14,8 @@ cd dist
 
 git init
 git add -A
-git commit -m 'deploy'
+git commit -m 'New Deployment'
+git push -f git@github.com:explorelife168/SurfClone.github.io.git master:gh-pages
 
-# if you are deploying to https://<USERNAME>.github.io
-# git push -f git@github.com:explorelife168
-# /explorelife168.github.io.git main
-
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:explorelife168/SurfClone.github.io.git main:gh-pages
 
 cd -
