@@ -6,12 +6,10 @@
           <Router-link to="/SurfBoards"><span>SurfBoards</span></Router-link>
         </li>
         <li>
-          <Router-link to="/SurfBoards/Fins"><span>FINS</span></Router-link>
+          <Router-link to="/Fins"><span>FINS</span></Router-link>
         </li>
         <li>
-          <Router-link to="/SurfBoards/Fins/DTFLEX"
-            ><span>DTFLEX FIN</span></Router-link
-          >
+          <Router-link to="/Fins/DTFLEX"><span>DTFLEX FIN</span></Router-link>
         </li>
       </ol>
     </div>
@@ -22,10 +20,6 @@
       <div class="txt">
         <div class="name">
           <h2>DTFLEX FIN</h2>
-        </div>
-        <div class="price"><p>$110.00</p></div>
-        <div class="add">
-          <button type="submit">ADD TO CART</button>
         </div>
         <h3>DT Flex Fin</h3>
         <p>Great single fin for mid-lengths or single fin longboards.</p>
@@ -107,25 +101,6 @@ export default {
       h2 {
         font-size: 30px;
         color: rgba(125, 153, 16, 0.697);
-      }
-    }
-    .price {
-      margin-bottom: 15px;
-      p {
-        font-size: 20px;
-      }
-    }
-    .add {
-      button {
-        width: 320px;
-        height: 30px;
-        background-color: rgba(125, 153, 16, 0.697);
-        color: white;
-        font-weight: 600;
-        border: none;
-        margin-bottom: 15px;
-        cursor: pointer;
-        border-radius: 2px;
       }
     }
     h3 {

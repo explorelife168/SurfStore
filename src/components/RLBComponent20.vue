@@ -23,10 +23,6 @@
         <div class="name">
           <h2>RLB FIN</h2>
         </div>
-        <div class="price"><p>$100.00</p></div>
-        <div class="add">
-          <button type="submit">ADD TO CART</button>
-        </div>
         <h3>Donald's 60s style fin template!</h3>
         <p>
           Donald's 60s style fin template that he used in his signature Jacobs
@@ -107,25 +103,6 @@ export default {
       h2 {
         font-size: 30px;
         color: rgba(125, 153, 16, 0.697);
-      }
-    }
-    .price {
-      margin-bottom: 15px;
-      p {
-        font-size: 20px;
-      }
-    }
-    .add {
-      button {
-        width: 320px;
-        height: 30px;
-        background-color: rgba(125, 153, 16, 0.697);
-        color: white;
-        font-weight: 600;
-        border: none;
-        margin-bottom: 15px;
-        cursor: pointer;
-        border-radius: 2px;
       }
     }
     h3 {

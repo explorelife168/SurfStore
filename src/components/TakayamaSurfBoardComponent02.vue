@@ -42,7 +42,7 @@
             ><img src="../Pic/Funboard-HOWARD MINI.jpeg" alt=""
           /></router-link>
         </div>
-        <div class="scorpion">
+        <div class="scorpion-f">
           <router-link to="/SurfBoards/FunBoard/Scorpion"
             ><img src="../Pic/Funboard-SCORPION.jpeg" alt=""
           /></router-link>
@@ -70,12 +70,12 @@
             ><img src="../Pic/Shortboard-HUMU FISH.jpeg" alt=""
           /></router-link>
         </div>
-        <div class="scorpion">
+        <div class="scorpion-s">
           <router-link to="/SurfBoards/ShortBoard/Scorpion"
             ><img src="../Pic/Shortboard-SCORPION.jpeg" alt=""
           /></router-link>
         </div>
-        <div class="scorpion2">
+        <div class="scorpion2-s">
           <router-link to="/SurfBoards/ShortBoard/Scorpion2"
             ><img src="../Pic/Shortboard-SCORPION2.jpeg" alt=""
           /></router-link>
@@ -171,7 +171,7 @@ export default {};
           width: 200px;
         }
       }
-      .scorpion {
+      .scorpion-f {
         img {
           width: 200px;
         }
@@ -204,17 +204,12 @@ export default {};
           width: 200px;
         }
       }
-      .scorpion {
+      .scorpion-s {
         img {
           width: 200px;
         }
       }
-      .scorpion2 {
-        img {
-          width: 200px;
-        }
-      }
-      .stone2 {
+      .scorpion2-s {
         img {
           width: 200px;
         }

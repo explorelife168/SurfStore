@@ -25,10 +25,7 @@
         <div class="name">
           <h2>Stone Steps</h2>
         </div>
-        <div class="price"><p>$1,650.00</p></div>
-        <div class="add">
-          <button type="submit">ADD TO CART</button>
-        </div>
+
         <h3>Single fin mid-length!</h3>
         <p>
           Stone Steps was one of Donald's favorite surf spots while living in
@@ -183,52 +180,27 @@ export default {
   }
   .txt {
     width: 320px;
-    .name {
-      margin-bottom: 10px;
-      h2 {
-        font-size: 30px;
-        color: rgba(125, 153, 16, 0.697);
-      }
-    }
-    .price {
-      margin-bottom: 15px;
-      p {
-        font-size: 20px;
-      }
-    }
-    .add {
-      button {
-        width: 320px;
-        height: 30px;
-        background-color: rgba(125, 153, 16, 0.697);
-        color: white;
-        font-weight: 600;
-        border: none;
-        margin-bottom: 15px;
-        cursor: pointer;
-        border-radius: 2px;
-      }
-    }
-    h3 {
-      margin-block-start: none;
-    }
+  }
+  h3 {
+    margin-block-start: none;
+  }
 
-    .fin {
-      ul {
-        li {
-          list-style: none;
-        }
+  .fin {
+    ul {
+      li {
+        list-style: none;
       }
     }
-    .specs {
-      ul {
-        li {
-          list-style: none;
-        }
+  }
+  .specs {
+    ul {
+      li {
+        list-style: none;
       }
     }
   }
 }
+
 .ig {
   width: 100%;
   display: flex;

@@ -26,10 +26,10 @@
         <div class="name">
           <h2>MODEL-T</h2>
         </div>
-        <div class="price"><p>$2,065.00</p></div>
+        <!-- <div class="price"><p>$2,065.00</p></div>
         <div class="add">
           <button type="submit">ADD TO CART</button>
-        </div>
+        </div> -->
         <h3>Everyone's favorite classic single fin log!</h3>
         <p>
           This design is the most well-rounded and versatile of Donald's classic
@@ -175,25 +175,25 @@ export default {
         color: rgba(125, 153, 16, 0.697);
       }
     }
-    .price {
-      margin-bottom: 15px;
-      p {
-        font-size: 20px;
-      }
-    }
-    .add {
-      button {
-        width: 320px;
-        height: 30px;
-        background-color: rgba(125, 153, 16, 0.697);
-        color: white;
-        font-weight: 600;
-        border: none;
-        margin-bottom: 15px;
-        cursor: pointer;
-        border-radius: 2px;
-      }
-    }
+    // .price {
+    //   margin-bottom: 15px;
+    //   p {
+    //     font-size: 20px;
+    //   }
+    // }
+    // .add {
+    //   button {
+    //     width: 320px;
+    //     height: 30px;
+    //     background-color: rgba(125, 153, 16, 0.697);
+    //     color: white;
+    //     font-weight: 600;
+    //     border: none;
+    //     margin-bottom: 15px;
+    //     cursor: pointer;
+    //     border-radius: 2px;
+    //   }
+    // }
     h3 {
       margin-block-start: none;
     }

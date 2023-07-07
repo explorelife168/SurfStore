@@ -25,10 +25,7 @@
         <div class="name">
           <h2>Scorpion</h2>
         </div>
-        <div class="price"><p>$1,230.00</p></div>
-        <div class="add">
-          <button type="submit">ADD TO CART</button>
-        </div>
+
         <h3>Scorpion</h3>
         <p>
           High performance and miniture version of the original Scorpion! This
@@ -137,19 +134,7 @@ export default {
   }
   .txt {
     width: 320px;
-    .name {
-      margin-bottom: 10px;
-      h2 {
-        font-size: 30px;
-        color: rgba(125, 153, 16, 0.697);
-      }
-    }
-    .price {
-      margin-bottom: 15px;
-      p {
-        font-size: 20px;
-      }
-    }
+
     .add {
       button {
         width: 320px;

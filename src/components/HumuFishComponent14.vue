@@ -25,10 +25,7 @@
         <div class="name">
           <h2>Humu Fish</h2>
         </div>
-        <div class="price"><p>$1,250.00</p></div>
-        <div class="add">
-          <button type="submit">ADD TO CART</button>
-        </div>
+
         <h3>Retro Fish!</h3>
         <p>
           Straight from the past, this Fish is a re-worked classic of Donald's
@@ -136,25 +133,7 @@ export default {
         color: rgba(125, 153, 16, 0.697);
       }
     }
-    .price {
-      margin-bottom: 15px;
-      p {
-        font-size: 20px;
-      }
-    }
-    .add {
-      button {
-        width: 320px;
-        height: 30px;
-        background-color: rgba(125, 153, 16, 0.697);
-        color: white;
-        font-weight: 600;
-        border: none;
-        margin-bottom: 15px;
-        cursor: pointer;
-        border-radius: 2px;
-      }
-    }
+
     h3 {
       margin-block-start: none;
     }
