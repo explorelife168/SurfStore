@@ -1,8 +1,7 @@
 const { defineConfig } = require("@vue/cli-service");
 module.exports = defineConfig({
   transpileDependencies: true,
-});
 
-module.exports = {
-  publicPath: "/SurfClone.github.io/",
-};
+  publicPath:
+    process.env.NODE_ENV === "production" ? "/SurfClone.github.io//" : "/",
+});
