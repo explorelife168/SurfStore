@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="down">
-      <div class="nav">
+      <div class="nav-1">
         <ul>
           <li><Router-link to="/">HOME</Router-link></li>
           <li><Router-link to="/SurfBoards">SURFBOARDS</Router-link></li>
@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  name: "FootComponent",
+  name: "Foot390Component",
 };
 </script>
 <style lang="scss" scoped>
@@ -43,28 +43,33 @@ export default {
 }
 
 .footer {
-  width: 100%;
+  width: 390px;
   margin: 25px 0 0 0;
-  position: relative;
+  margin: 0 auto;
+
   .top {
     width: 100%;
-    height: 170px;
+    height: 100px;
     background-color: rgba(88, 88, 88, 0.65);
+    margin: 20px 0 0 0;
 
     .subscribe {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 800.25px;
+      align-items: flex-start;
+      width: 390px;
       height: 100%;
-      margin: 0 auto;
+      margin: 0 10px;
 
       label {
         color: white;
-        margin: 0 1px;
+        margin: 10px 1px;
       }
       input {
+        margin: 10px 0px;
       }
+
       button {
         width: 100px;
         height: 25px;
@@ -79,30 +84,27 @@ export default {
     }
   }
   .down {
-    width: 100%;
+    width: 390px;
     height: 250px;
     background-color: #0e1215;
     position: relative;
-    .nav {
-      width: 800.25px;
+    .nav-1 {
+      width: 100%;
       height: 100%;
       display: flex;
       justify-content: center;
       flex-direction: column;
-
       margin: 0 auto;
       position: relative;
       ul {
-        width: 600px;
+        width: 390px;
         height: 100%;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
         list-style: none;
-        margin: auto;
 
         li {
-          margin: 0 0 25px 0;
+          margin: 5px 10px;
           a {
             text-decoration: none;
             color: white;
@@ -111,10 +113,11 @@ export default {
       }
       .copyright {
         position: absolute;
-        bottom: 65px;
+        bottom: 25px;
         p {
           color: white;
-          font-size: 10px;
+          font-size: 8px;
+          margin: 5px 10px;
         }
       }
     }

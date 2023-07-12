@@ -98,7 +98,7 @@ export default {
     },
   },
   mounted() {
-    this.$store.dispatch("PRODUCT_READ");
+    // this.$store.dispatch("PRODUCT_READ");
   },
 };
 </script>
@@ -210,5 +210,7 @@ export default {
       }
     }
   }
+}
+@media screen and (min-width: 390px) {
 }
 </style>

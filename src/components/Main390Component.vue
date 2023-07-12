@@ -7,17 +7,21 @@
       <div class="pic2" @click="enlargeHandler2">
         <img :src="assPic2" alt="" />
       </div>
+    </div>
+    <div class="pic-area-2">
       <div class="pic3" @click="enlargeHandler3">
         <img :src="assPic3" alt="" />
       </div>
-    </div>
-    <div class="pic-area-2">
       <div class="pic4" @click="enlargeHandler4">
         <img :src="assPic4" alt="" />
       </div>
+    </div>
+    <div class="pic-area-3">
       <div class="pic5" @click="enlargeHandler5">
         <img :src="assPic5" alt="" />
       </div>
+    </div>
+    <div class="pic-area-4">
       <div class="pic6" @click="enlargeHandler6">
         <img :src="assPic6" alt="" />
       </div>
@@ -54,7 +58,7 @@
 
 <script>
 export default {
-  name: "MainComponent",
+  name: "Main390Component",
   methods: {
     // Enlarge Img
     enlargeHandler: function () {
@@ -123,7 +127,7 @@ export default {
 }
 
 .main {
-  margin: 90px 0 50px 0;
+  margin: 50px 0 50px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -131,48 +135,86 @@ export default {
   .pic-area-1 {
     display: flex;
     justify-content: center;
+    width: 370px;
 
     .pic1,
-    .pic2,
-    .pic3 {
-      height: 250px;
+    .pic2 {
+      height: 170px;
       margin: 1.5px;
       overflow: hidden;
       img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
       }
     }
   }
   .pic-area-2 {
     display: flex;
     justify-content: center;
+    width: 370px;
 
-    .pic4,
-    .pic5,
-    .pic6 {
-      width: 263.75px;
+    .pic3 {
+      width: 210px;
       margin: 1.5px;
       overflow: hidden;
       img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
+      }
+    }
+    .pic4 {
+      width: 300px;
+      margin: 1.5px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
   }
-}
-.pic1,
-.pic2,
-.pic3,
-.pic4,
-.pic5,
-.pic6 {
-  img:hover {
-    transform: scale(1.05);
-    transition: 0.2s linear;
+  .pic-area-3 {
+    width: 370px;
+    margin: 1.5px;
+    .pic5 {
+      height: 250px;
+      margin: 1.5px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .pic-area-4 {
+    width: 370px;
+    margin: 1.5px;
+    .pic6 {
+      height: 250px;
+      margin: 1.5px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .pic1,
+  .pic2,
+  .pic3,
+  .pic4,
+  .pic5,
+  .pic6 {
+    img:hover {
+      transform: scale(1.05);
+      transition: 0.2s linear;
+    }
   }
 }
-
 .main {
   .popUpImg {
     display: block;
@@ -187,7 +229,7 @@ export default {
       position: absolute;
       top: 0;
       right: 10px;
-      font-size: 60px;
+      font-size: 40px;
       font-weight: bolder;
       color: white;
       cursor: pointer;
@@ -200,7 +242,7 @@ export default {
       transform: translate(-50%, -50%);
       border: 5px solid #fff;
       border-radius: 5px;
-      height: 500px;
+      height: 350px;
       object-fit: cover;
     }
   }
@@ -217,7 +259,7 @@ export default {
       position: absolute;
       top: 0;
       right: 10px;
-      font-size: 60px;
+      font-size: 40px;
       font-weight: bolder;
       color: white;
       cursor: pointer;
@@ -230,7 +272,7 @@ export default {
       transform: translate(-50%, -50%);
       border: 5px solid #fff;
       border-radius: 5px;
-      height: 400px;
+      height: 220px;
       object-fit: cover;
     }
   }
@@ -247,7 +289,7 @@ export default {
       position: absolute;
       top: 0;
       right: 10px;
-      font-size: 60px;
+      font-size: 40px;
       font-weight: bolder;
       color: white;
       cursor: pointer;
@@ -260,7 +302,7 @@ export default {
       transform: translate(-50%, -50%);
       border: 5px solid #fff;
       border-radius: 5px;
-      height: 400px;
+      height: 250px;
       object-fit: cover;
     }
   }
@@ -277,7 +319,7 @@ export default {
       position: absolute;
       top: 0;
       right: 10px;
-      font-size: 60px;
+      font-size: 40px;
       font-weight: bolder;
       color: white;
       cursor: pointer;
@@ -290,7 +332,7 @@ export default {
       transform: translate(-50%, -50%);
       border: 5px solid #fff;
       border-radius: 5px;
-      height: 400px;
+      height: 200px;
       object-fit: cover;
     }
   }
@@ -307,7 +349,7 @@ export default {
       position: absolute;
       top: 0;
       right: 10px;
-      font-size: 60px;
+      font-size: 40px;
       font-weight: bolder;
       color: white;
       cursor: pointer;
@@ -320,7 +362,7 @@ export default {
       transform: translate(-50%, -50%);
       border: 5px solid #fff;
       border-radius: 5px;
-      height: 400px;
+      height: 200px;
       object-fit: cover;
     }
   }
@@ -337,7 +379,7 @@ export default {
       position: absolute;
       top: 0;
       right: 10px;
-      font-size: 60px;
+      font-size: 40px;
       font-weight: bolder;
       color: white;
       cursor: pointer;
@@ -350,7 +392,7 @@ export default {
       transform: translate(-50%, -50%);
       border: 5px solid #fff;
       border-radius: 5px;
-      height: 400px;
+      height: 200px;
       object-fit: cover;
     }
   }

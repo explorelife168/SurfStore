@@ -56,7 +56,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@900&display=swap");
 * {
   margin: 0;

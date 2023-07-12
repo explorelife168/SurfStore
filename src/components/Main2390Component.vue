@@ -10,7 +10,7 @@
       </p>
       <p>Or simply use the following form!</p>
     </div>
-    <div class="input">
+    <div class="input-text">
       <div class="name">
         <label for="name">Name</label>
         <br />
@@ -32,7 +32,7 @@
 </template>
 <script>
 export default {
-  name: "Main2Component",
+  name: "Main2390Component",
 };
 </script>
 <style lang="scss" scoped>
@@ -48,7 +48,7 @@ export default {
   align-items: center;
 
   .text {
-    width: 800.25px;
+    width: 370px;
     position: relative;
     h3 {
       font-weight: 400;
@@ -68,8 +68,8 @@ export default {
     position: absolute;
     top: -10px;
   }
-  .input {
-    width: 800.25px;
+  .input-text {
+    width: 370px;
     .name,
     .email {
       margin: 10px 0;
@@ -85,7 +85,7 @@ export default {
       margin: 10px 0;
       width: 100%;
       textarea {
-        width: 800.25px;
+        width: 370px;
         height: 188px;
         background-color: rgba(247, 245, 223, 0.93);
         border: 2px solid #ccc;
@@ -102,7 +102,6 @@ export default {
       color: white;
       background-color: rgba(101, 125, 5, 0.795);
       border: none;
-      margin: 10px 0;
     }
     button:hover {
       background-color: rgba(41, 51, 4, 0.839);
