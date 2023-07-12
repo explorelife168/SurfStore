@@ -127,7 +127,6 @@ export default {
 }
 
 .main {
-  margin: 50px 0 50px 0;
   display: flex;
   flex-direction: column;
   align-items: center;

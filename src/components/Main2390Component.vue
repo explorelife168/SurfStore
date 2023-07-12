@@ -52,6 +52,7 @@ export default {
     position: relative;
     h3 {
       font-weight: 400;
+      margin: 24px 0 0 0;
     }
     > p a {
       color: rgba(101, 125, 5, 0.795);
@@ -66,7 +67,7 @@ export default {
     height: 3px;
     background-color: rgba(157, 195, 5, 0.697);
     position: absolute;
-    top: -10px;
+    top: 10px;
   }
   .input-text {
     width: 370px;

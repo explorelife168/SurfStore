@@ -43,7 +43,6 @@ export default {
 }
 
 .footer {
-  width: 390px;
   margin: 25px 0 0 0;
   margin: 0 auto;
 
@@ -84,7 +83,6 @@ export default {
     }
   }
   .down {
-    width: 390px;
     height: 250px;
     background-color: #0e1215;
     position: relative;
