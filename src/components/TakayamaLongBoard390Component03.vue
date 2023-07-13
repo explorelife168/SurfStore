@@ -43,39 +43,60 @@ export default {};
 }
 
 .container {
-  margin: 0 auto;
-  width: 800.25px;
+  width: 390px;
 
   // longboard
   .longboardarea {
-    height: 270px;
+    width: 390px;
+
     .lb {
       margin: 10px 0;
       span {
         color: rgba(125, 153, 16, 0.697);
-        font-size: 22px;
+        font-size: 20px;
+        padding: 0 10px;
       }
     }
     .lbpic {
       display: flex;
+      flex-wrap: wrap;
+      width: 390px;
+      justify-content: center;
+
       .modelt {
+        width: 185px;
+        overflow: hidden;
         img {
-          width: 200px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
       .double {
+        width: 185px;
+        overflow: hidden;
         img {
-          width: 200px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
       .dt2x {
+        width: 185px;
+        overflow: hidden;
         img {
-          width: 200px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
       .terramar {
+        width: 185px;
+        overflow: hidden;
         img {
-          width: 200px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
     }

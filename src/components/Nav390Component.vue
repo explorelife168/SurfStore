@@ -13,9 +13,7 @@
     </transition>
     <div class="nav">
       <div class="logo-390">
-        <div class="logo">
-          <img src="../Pic/logo.jpeg" alt="" />
-        </div>
+        <img src="../Pic/logo.jpeg" alt="" />
       </div>
       <div class="nav-bar">
         <div class="button-on">
@@ -76,13 +74,9 @@ export default {
     justify-content: space-between;
     height: 60px;
     .logo-390 {
-      .logo {
+      margin: 10px;
+      img {
         height: 35px;
-        margin: 10px;
-        img {
-          width: 100%;
-          height: 100%;
-        }
       }
     }
     .nav-bar {

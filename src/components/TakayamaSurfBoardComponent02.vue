@@ -89,7 +89,7 @@
 export default {};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 * {
   padding: 0;
   margin: 0;
@@ -212,6 +212,190 @@ export default {};
       .scorpion2-s {
         img {
           width: 200px;
+        }
+      }
+    }
+  }
+}
+
+//Iphone12 pro
+@media screen and (max-width: 390px) {
+  .container {
+    width: 390px;
+    display: flex;
+    flex-wrap: wrap;
+    .title {
+      width: 390px;
+      height: 80px;
+      margin: 10px 0 0 0;
+
+      span {
+        color: rgba(125, 153, 16, 0.697);
+        font-size: 20px;
+        padding: 0 10px;
+      }
+    }
+
+    // longboard
+    .longboard {
+      width: 390px;
+      position: relative;
+
+      .lb {
+        margin: 10px 0;
+        span {
+          color: rgba(125, 153, 16, 0.697);
+          font-size: 20px;
+          padding: 0 10px;
+        }
+      }
+      .lbpic {
+        display: flex;
+        flex-wrap: wrap;
+        width: 390px;
+        justify-content: center;
+
+        .modelt {
+          width: 185px;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .double {
+          width: 185px;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .dt2x {
+          width: 185px;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .terramar {
+          width: 185px;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    .longboard::before {
+      content: "";
+      position: absolute;
+      width: 370px;
+      height: 3px;
+      background-color: rgba(125, 153, 16, 0.697);
+      top: -55px;
+      left: 10px;
+    }
+    // funboard
+    .funboard {
+      position: relative;
+      width: 390px;
+      .fb {
+        margin: 10px 0;
+        span {
+          color: rgba(125, 153, 16, 0.697);
+          font-size: 22px;
+        }
+      }
+      .fbpic {
+        display: flex;
+        flex-wrap: wrap;
+        width: 380px;
+        justify-content: center;
+        .howardmini {
+          width: 185px;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .scorpion-f {
+          width: 185px;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .stone {
+          width: 185px;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .stone2 {
+          width: 185px;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    // shortboard
+    .shortboard {
+      height: 270px;
+      .sb {
+        span {
+          color: rgba(125, 153, 16, 0.697);
+          font-size: 22px;
+        }
+      }
+      .sbpic {
+        display: flex;
+        flex-wrap: wrap;
+        width: 370px;
+        justify-content: center;
+        .humu {
+          width: 185px;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .scorpion-s {
+          width: 185px;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .scorpion2-s {
+          width: 185px;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
         }
       }
     }
