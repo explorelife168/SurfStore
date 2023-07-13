@@ -1,30 +1,30 @@
 <template>
-  <div class="container">
-    <div class="title">
+  <div class="container-390-02">
+    <div class="title-390-02">
       <p><span>SurfBoards</span></p>
     </div>
     <!-- LONGBOARD -->
-    <div class="longboard">
-      <div class="lb">
+    <div class="longboard-390-02">
+      <div class="lb-390-02">
         <p><span>LongBoards</span></p>
       </div>
-      <div class="lbpic">
-        <div class="modelt">
+      <div class="lbpic-390-02">
+        <div class="modelt-390-02">
           <router-link to="/SurfBoards/LongBoard/ModelT"
             ><img src="../Pic/Longboard-MODEL T.jpeg" alt=""
           /></router-link>
         </div>
-        <div class="double">
+        <div class="double-390-02">
           <router-link to="/SurfBoards/LongBoard/DoubleEnder"
             ><img src="../Pic/Longboard-DOUBLE ENDER.jpeg" alt=""
           /></router-link>
         </div>
-        <div class="dt2x">
+        <div class="dt2x-390-02">
           <router-link to="/SurfBoards/LongBoard/DT2X"
             ><img src="../Pic/Longboard-DT2X.jpeg" alt=""
           /></router-link>
         </div>
-        <div class="terramar">
+        <div class="terramar-390-02">
           <router-link to="/SurfBoards/LongBoard/Terramar"
             ><img src="../Pic/Longboard-TERRAMAR.jpeg" alt=""
           /></router-link>
@@ -32,27 +32,27 @@
       </div>
     </div>
     <!-- FUNBOARD -->
-    <div class="funboard">
-      <div class="fb">
+    <div class="funboard-390-02">
+      <div class="fb-390-02">
         <p><span>FunBoards</span></p>
       </div>
-      <div class="fbpic">
-        <div class="howardmini">
+      <div class="fbpic-390-02">
+        <div class="howardmini-390-02">
           <router-link to="/SurfBoards/FunBoard/HowardMini"
             ><img src="../Pic/Funboard-HOWARD MINI.jpeg" alt=""
           /></router-link>
         </div>
-        <div class="scorpion-f">
+        <div class="scorpion-f-390-02">
           <router-link to="/SurfBoards/FunBoard/Scorpion"
             ><img src="../Pic/Funboard-SCORPION.jpeg" alt=""
           /></router-link>
         </div>
-        <div class="stone">
+        <div class="stone-390-02">
           <router-link to="/SurfBoards/FunBoard/StoneSteps"
             ><img src="../Pic/Funboard-STONE STEPS.jpeg" alt=""
           /></router-link>
         </div>
-        <div class="stone2">
+        <div class="stone2-390-02">
           <router-link to="/SurfBoards/FunBoard/StoneSteps2"
             ><img src="../Pic/Funboard-STONE STEPS 2.jpeg" alt=""
           /></router-link>
@@ -60,23 +60,23 @@
       </div>
     </div>
     <!-- SHORTBOARD -->
-    <div class="shortboard">
-      <div class="sb">
+    <div class="shortboard-390-02">
+      <div class="sb-390-02">
         <p><span>ShortBoards</span></p>
       </div>
-      <div class="content">
-        <div class="sbpic">
-          <div class="humu">
-            <router-link to="/SurfBoards/ShortBoard/HumuFish"
-              ><img src="../Pic/Shortboard-HUMU FISH.jpeg" alt=""
+      <div class="content-390-02">
+        <div class="sbpic-390-02">
+          <div class="humu-390-02">
+            <router-link to="/SurfBoards/ShortBoard/HumuFish">
+              <img src="../Pic/Shortboard-HUMU FISH.jpeg" alt=""
             /></router-link>
           </div>
-          <div class="scorpion-s">
+          <div class="scorpion-s-390-02">
             <router-link to="/SurfBoards/ShortBoard/Scorpion"
               ><img src="../Pic/Shortboard-SCORPION.jpeg" alt=""
             /></router-link>
           </div>
-          <div class="scorpion2-s">
+          <div class="scorpion2-s-390-02">
             <router-link to="/SurfBoards/ShortBoard/Scorpion2"
               ><img src="../Pic/Shortboard-SCORPION2.jpeg" alt=""
             /></router-link>
@@ -88,7 +88,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: function () {
+    return {};
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -99,11 +103,11 @@ export default {};
 }
 
 //Iphone12 pro
-.container {
+.container-390-02 {
   width: 390px;
   display: flex;
   flex-wrap: wrap;
-  .title {
+  .title-390-02 {
     width: 390px;
     height: 80px;
     margin: 10px 0 0 0;
@@ -116,11 +120,11 @@ export default {};
   }
 
   // longboard
-  .longboard {
+  .longboard-390-02 {
     width: 390px;
     position: relative;
 
-    .lb {
+    .lb-390-02 {
       margin: 10px 0;
       span {
         color: rgba(125, 153, 16, 0.697);
@@ -128,13 +132,13 @@ export default {};
         padding: 0 10px;
       }
     }
-    .lbpic {
+    .lbpic-390-02 {
       display: flex;
       flex-wrap: wrap;
       width: 390px;
       justify-content: center;
 
-      .modelt {
+      .modelt-390-02 {
         width: 185px;
         overflow: hidden;
         img {
@@ -143,7 +147,7 @@ export default {};
           object-fit: cover;
         }
       }
-      .double {
+      .double-390-02 {
         width: 185px;
         overflow: hidden;
         img {
@@ -152,7 +156,7 @@ export default {};
           object-fit: cover;
         }
       }
-      .dt2x {
+      .dt2x-390-02 {
         width: 185px;
         overflow: hidden;
         img {
@@ -161,7 +165,7 @@ export default {};
           object-fit: cover;
         }
       }
-      .terramar {
+      .terramar-390-02 {
         width: 185px;
         overflow: hidden;
         img {
@@ -172,7 +176,7 @@ export default {};
       }
     }
   }
-  .longboard::before {
+  .longboard-390-02::before {
     content: "";
     position: absolute;
     width: 370px;
@@ -182,10 +186,10 @@ export default {};
     left: 10px;
   }
   // funboard
-  .funboard {
+  .funboard-390-02 {
     width: 390px;
     margin: 20px 0 0 0;
-    .fb {
+    .fb-390-02 {
       margin: 10px 0;
       span {
         color: rgba(125, 153, 16, 0.697);
@@ -193,12 +197,12 @@ export default {};
         padding: 0 10px;
       }
     }
-    .fbpic {
+    .fbpic-390-02 {
       display: flex;
       flex-wrap: wrap;
       width: 390px;
       justify-content: center;
-      .howardmini {
+      .howardmini-390-02 {
         width: 185px;
         overflow: hidden;
         img {
@@ -207,7 +211,7 @@ export default {};
           object-fit: cover;
         }
       }
-      .scorpion-f {
+      .scorpion-f-390-02 {
         width: 185px;
         overflow: hidden;
         img {
@@ -216,7 +220,7 @@ export default {};
           object-fit: cover;
         }
       }
-      .stone {
+      .stone-390-02 {
         width: 185px;
         overflow: hidden;
         img {
@@ -225,7 +229,7 @@ export default {};
           object-fit: cover;
         }
       }
-      .stone2 {
+      .stone2-390-02 {
         width: 185px;
         overflow: hidden;
         img {
@@ -237,11 +241,11 @@ export default {};
     }
   }
   // shortboard
-  .shortboard {
+  .shortboard-390-02 {
     width: 390px;
     margin: 20px 0 0 0;
 
-    .sb {
+    .sb-390-02 {
       margin: 10px 0;
       span {
         color: rgba(125, 153, 16, 0.697);
@@ -249,16 +253,16 @@ export default {};
         padding: 0 10px;
       }
     }
-    .content {
+    .content-390-02 {
       width: 390px;
       display: flex;
       justify-content: center;
-      .sbpic {
+      .sbpic-390-02 {
         display: flex;
         flex-wrap: wrap;
         width: 370px;
 
-        .humu {
+        .humu-390-02 {
           width: 185px;
           overflow: hidden;
 
@@ -268,7 +272,7 @@ export default {};
             object-fit: cover;
           }
         }
-        .scorpion-s {
+        .scorpion-s-390-02 {
           width: 185px;
           overflow: hidden;
 
@@ -278,7 +282,7 @@ export default {};
             object-fit: cover;
           }
         }
-        .scorpion2-s {
+        .scorpion2-s-390-02 {
           width: 185px;
           overflow: hidden;
 

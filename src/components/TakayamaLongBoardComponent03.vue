@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" :key="longBoard">
     <!-- LONGBOARD -->
     <div class="longboardarea">
       <div class="lb">
@@ -32,7 +32,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: function () {
+    return {
+      longBoard: "longBoard",
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>

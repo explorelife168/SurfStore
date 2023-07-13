@@ -32,7 +32,7 @@ import Foot390Component from "@/components/Foot390Component.vue";
 import TakayamaLongBoardComponent03 from "../components/TakayamaLongBoardComponent03.vue";
 import TakayamaLongBoard390Component03 from "../components/TakayamaLongBoard390Component03.vue";
 export default {
-  name: "TakayamaSurfBoard390View02",
+  name: "TakayamaLongBoard390View03",
   components: {
     NavComponent,
     Nav390Component,

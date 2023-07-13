@@ -1,29 +1,29 @@
 <template>
-  <div class="container-390">
-    <!-- LONGBOARD -->
-    <div class="longboardarea-390">
-      <div class="lb-390">
-        <p><span>LongBoards</span></p>
+  <div class="container-390-04">
+    <!-- FUNBOARD -->
+    <div class="funboard-390-04">
+      <div class="fb-390-04">
+        <p><span>FunBoards</span></p>
       </div>
-      <div class="lbpic-390">
-        <div class="modelt-390">
-          <router-link to="/SurfBoards/LongBoard/ModelT"
-            ><img src="../Pic/Longboard-MODEL T.jpeg" alt=""
+      <div class="fbpic-390-04">
+        <div class="howardmini-390-04">
+          <router-link to="/SurfBoards/FunBoard/HowardMini"
+            ><img src="../Pic/Funboard-HOWARD MINI.jpeg" alt=""
           /></router-link>
         </div>
-        <div class="double-390">
-          <router-link to="/SurfBoards/LongBoard/DoubleEnder"
-            ><img src="../Pic/Longboard-DOUBLE ENDER.jpeg" alt=""
+        <div class="scorpion-390-04">
+          <router-link to="/SurfBoards/FunBoard/Scorpion"
+            ><img src="../Pic/Funboard-SCORPION.jpeg" alt=""
           /></router-link>
         </div>
-        <div class="dt2x-390">
-          <router-link to="/SurfBoards/LongBoard/DT2X"
-            ><img src="../Pic/Longboard-DT2X.jpeg" alt=""
+        <div class="stone-390-04">
+          <router-link to="/SurfBoards/FunBoard/StoneSteps"
+            ><img src="../Pic/Funboard-STONE STEPS.jpeg" alt=""
           /></router-link>
         </div>
-        <div class="terramar-390">
-          <router-link to="/SurfBoards/LongBoard/Terramar"
-            ><img src="../Pic/Longboard-TERRAMAR.jpeg" alt=""
+        <div class="stone2-390-04">
+          <router-link to="/SurfBoards/FunBoard/StoneSteps2"
+            ><img src="../Pic/Funboard-STONE STEPS 2.jpeg" alt=""
           /></router-link>
         </div>
       </div>
@@ -32,11 +32,7 @@
 </template>
 
 <script>
-export default {
-  data: function () {
-    return {};
-  },
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
@@ -46,12 +42,14 @@ export default {
   box-sizing: border-box;
 }
 
-.container-390 {
-  // longboard
-  .longboardarea-390 {
-    width: 390px;
+.container-390-04 {
+  width: 390px;
 
-    .lb-390 {
+  // funboard
+  .funboard-390-04 {
+    width: 390px;
+    margin: 20px 0 0 0;
+    .fb-390-04 {
       margin: 10px 0;
       span {
         color: rgba(125, 153, 16, 0.697);
@@ -59,13 +57,12 @@ export default {
         padding: 0 10px;
       }
     }
-    .lbpic-390 {
+    .fbpic-390-04 {
       display: flex;
       flex-wrap: wrap;
       width: 390px;
       justify-content: center;
-
-      .modelt-390 {
+      .howardmini-390-04 {
         width: 185px;
         overflow: hidden;
         img {
@@ -74,7 +71,7 @@ export default {
           object-fit: cover;
         }
       }
-      .double-390 {
+      .scorpion-390-04 {
         width: 185px;
         overflow: hidden;
         img {
@@ -83,7 +80,7 @@ export default {
           object-fit: cover;
         }
       }
-      .dt2x-390 {
+      .stone-390-04 {
         width: 185px;
         overflow: hidden;
         img {
@@ -92,7 +89,7 @@ export default {
           object-fit: cover;
         }
       }
-      .terramar-390 {
+      .stone2-390-04 {
         width: 185px;
         overflow: hidden;
         img {
