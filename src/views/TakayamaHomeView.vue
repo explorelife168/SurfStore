@@ -61,7 +61,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 391px) {
   .show {
     display: none;
   }
