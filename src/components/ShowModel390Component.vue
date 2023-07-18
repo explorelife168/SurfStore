@@ -108,7 +108,7 @@
 <script>
 import { mapState, mapMutations } from "vuex";
 export default {
-  name: "showModelComponent",
+  name: "showModel390Component",
   data: function () {
     return {};
   },
@@ -169,7 +169,7 @@ export default {
 
 .side-menu {
   .box-shadow-content {
-    width: 350px;
+    width: 250px;
     height: 100%;
     background-color: white;
     position: fixed;
@@ -179,7 +179,7 @@ export default {
     z-index: 2;
 
     .fixed-box-1 {
-      width: 350px;
+      width: 250px;
       background-color: rgb(255, 255, 255);
       position: fixed;
       height: 8%;
@@ -217,7 +217,7 @@ export default {
       }
     }
     .scroll-box {
-      width: 350px;
+      width: 250px;
       background-color: rgb(255, 255, 255);
       height: 70%;
       position: fixed;
@@ -241,20 +241,19 @@ export default {
               //產品照片
               .product-pic {
                 img {
-                  width: 70px;
+                  width: 50px;
                 }
               }
               //產品名稱及規格
               .product-name-size {
                 .product-name {
-                  width: 230px;
+                  width: 150px;
                   p {
-                    font-size: 14px;
+                    font-size: 12px;
                   }
                 }
                 .product-size {
                   margin: 5px 0;
-
                   p {
                     font-size: 9px;
                   }
@@ -264,16 +263,14 @@ export default {
             .leval-two {
               .product-quantity-price {
                 display: flex;
-                justify-content: space-between;
+                justify-content: right;
 
                 .product-quantity {
-                  position: relative;
-                  left: 108px;
                   input {
                     float: left;
                     color: black;
-                    width: 45px;
-                    height: 30px;
+                    width: 30px;
+                    height: 26px;
                     font-size: 16px;
                     text-align: center;
                     border: none;
@@ -283,10 +280,10 @@ export default {
                   }
                   button {
                     color: #4c4c4c;
-                    height: 30px;
+                    height: 26px;
                     float: left;
                     line-height: 16px;
-                    width: 26px;
+                    width: 20px;
                     background: transparent;
                     cursor: pointer;
                     font-size: 18px;
@@ -296,7 +293,7 @@ export default {
                   }
                 }
                 .product-price {
-                  margin: 0 10px;
+                  margin: 0 20px;
                   p {
                     font-size: 14px;
                     font-weight: bold;
@@ -309,7 +306,7 @@ export default {
       }
     }
     .fixed-box-2 {
-      width: 350px;
+      width: 250px;
       background-color: white;
       height: 22%;
       position: fixed;
@@ -345,7 +342,7 @@ export default {
         align-items: center;
         margin: 18px 0;
         button {
-          width: 300px;
+          width: 200px;
           height: 40px;
           background-color: rgb(110, 173, 92);
           color: white;
@@ -371,7 +368,7 @@ export default {
   opacity: 0;
 }
 .fade-enter-active {
-  transform: translateX(350px);
+  transform: translateX(250px);
   transition: 0.5s;
 }
 .fade-enter-to {
@@ -382,7 +379,7 @@ export default {
   opacity: 1;
 }
 .fade-leave-active {
-  transform: translateX(350px);
+  transform: translateX(250px);
   transition: 0.5s;
 }
 .fade-leave-to {
