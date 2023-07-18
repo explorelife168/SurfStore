@@ -68,11 +68,11 @@
 
 <script>
 export default {
-  name: "ModelTComponent",
+  name: "DT2XComponent",
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 * {
   box-sizing: border-box;
   padding: 0;

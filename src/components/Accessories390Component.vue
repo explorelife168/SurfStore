@@ -1,10 +1,10 @@
 <template>
-  <div class="content-acc">
-    <div class="text-acc">
-      <div class="title">
+  <div class="content-acc-390">
+    <div class="text-acc-390">
+      <div class="title-390">
         <h3>Surfboards by Donald Takayama apparel and accessories</h3>
       </div>
-      <div class="article">
+      <div class="article-390">
         <p>
           Currently all Surfboards by Donald Takayama tees and sweatshirts are
           locally printed in California by our friend Forward Screen Printing,
@@ -20,13 +20,13 @@
         </p>
       </div>
     </div>
-    <div class="buyOnline">
-      <div class="title-buy">
+    <div class="buyOnline-390">
+      <div class="title-buy-390">
         <h3>Buy Online</h3>
       </div>
-      <div class="menu-acc">
+      <div class="menu-acc-390">
         <div
-          class="item-01"
+          class="item-390"
           v-for="(product, index) in products"
           :key="product.id"
         >
@@ -67,7 +67,7 @@ import VueAxios from "vue-axios";
 import { mapState, mapMutations } from "vuex";
 Vue.use(VueAxios, axios);
 export default {
-  name: "AccessoriesComponent",
+  name: "Accessories390Component",
   data: function () {
     return {};
   },
@@ -86,19 +86,10 @@ export default {
       "sideCartOffContent",
       "sideOffContent",
     ]),
-    // showModelController() {
-    //   console.log("aaaa");
-    //   //sidemenu-switch
-    // this.sideContent(!this.showModelController);
-    //   //add sidemenu
-    // },
     addInCarts(index) {
       this.addCarts(this.products[index]);
       this.sideContent(true);
     },
-  },
-  mounted() {
-    // this.$store.dispatch("PRODUCT_READ");
   },
 };
 </script>
@@ -109,12 +100,12 @@ export default {
   padding: 0;
   margin: 0;
 }
-.content-acc {
+.content-acc-390 {
   max-width: 840px;
   margin: 0 auto;
-  .text-acc {
+  .text-acc-390 {
     padding: 0 10px;
-    .title {
+    .title-390 {
       h3 {
         font-size: 24px;
         font-weight: 350;
@@ -122,7 +113,7 @@ export default {
         margin: 20px 0 0 0;
       }
     }
-    .article {
+    .article-390 {
       p {
         margin: 20px 0 0 0;
         font-weight: 200;
@@ -132,9 +123,9 @@ export default {
       }
     }
   }
-  .buyOnline {
+  .buyOnline-390 {
     padding: 0 10px;
-    .title-buy {
+    .title-buy-390 {
       position: relative;
       h3 {
         font-size: 24px;
@@ -143,19 +134,19 @@ export default {
         margin: 40px 0 0 0;
       }
     }
-    .title-buy::before {
+    .title-buy-390 ::before {
       content: "";
       position: absolute;
-      width: 820px;
+      width: 370px;
       height: 3px;
       background-color: rgba(125, 153, 16, 0.697);
       top: -20px;
     }
-    .menu-acc {
+    .menu-acc-390 {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       flex-wrap: wrap;
-      .item-01 {
+      .item-390 {
         max-width: 240px;
         .pic-acc-01 {
           img {
@@ -210,7 +201,5 @@ export default {
       }
     }
   }
-}
-@media screen and (min-width: 390px) {
 }
 </style>

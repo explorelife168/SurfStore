@@ -152,7 +152,7 @@ export default {
     }
   }
   .ig-390 {
-    margin: 30px;
+    margin: 30px auto;
     width: 370px;
   }
 }

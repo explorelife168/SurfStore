@@ -71,11 +71,11 @@
 
 <script>
 export default {
-  name: "HumuFishComponenet14",
+  name: "HumuFishComponent14",
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 * {
   box-sizing: border-box;
   padding: 0;
