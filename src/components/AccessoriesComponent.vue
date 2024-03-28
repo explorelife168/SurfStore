@@ -61,11 +61,7 @@
 </template>
 
 <script>
-import Vue from "vue";
-import axios from "axios";
-import VueAxios from "vue-axios";
 import { mapState, mapMutations } from "vuex";
-Vue.use(VueAxios, axios);
 export default {
   name: "AccessoriesComponent",
   data: function () {
@@ -86,19 +82,11 @@ export default {
       "sideCartOffContent",
       "sideOffContent",
     ]),
-    // showModelController() {
-    //   console.log("aaaa");
-    //   //sidemenu-switch
-    // this.sideContent(!this.showModelController);
-    //   //add sidemenu
-    // },
+
     addInCarts(index) {
       this.addCarts(this.products[index]);
       this.sideContent(true);
     },
-  },
-  mounted() {
-    // this.$store.dispatch("PRODUCT_READ");
   },
 };
 </script>
