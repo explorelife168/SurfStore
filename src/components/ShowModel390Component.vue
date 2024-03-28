@@ -144,13 +144,7 @@ export default {
       this.plusCarts({ index, val, total });
     },
     inputHandler(e, index) {
-      if (
-        !isNaN(e.target.value) &&
-        e.target.value.length != 0 &&
-        e.target.value != 0 &&
-        e.target.value > 0 &&
-        e.target.value % 1 === 0
-      ) {
+      if (e.target.value.isInteger()) {
         this.inputCarts({ index, value: parseInt(e.target.value) });
       } else {
         alert("請輸入數字");
