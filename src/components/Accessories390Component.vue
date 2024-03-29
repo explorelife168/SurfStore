@@ -61,11 +61,8 @@
 </template>
 
 <script>
-import Vue from "vue";
-import axios from "axios";
-import VueAxios from "vue-axios";
 import { mapState, mapMutations } from "vuex";
-Vue.use(VueAxios, axios);
+
 export default {
   name: "Accessories390Component",
   data: function () {

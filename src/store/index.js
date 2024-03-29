@@ -148,12 +148,6 @@ const store = new Vuex.Store({
       state.showCartModelController = data;
     },
   },
-  actions: {
-    // PRODUCT_READ: (context) => {
-    //   return axios.get("http://localhost:3000/products").then((res) => {
-    //     context.commit("setProducts", res.data);
-    //   });
-    // },
-  },
+  actions: {},
 });
 export default store;
